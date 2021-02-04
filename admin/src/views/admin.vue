@@ -977,7 +977,17 @@
 </template>
 
 <script>
-$('body').removeClass('login-layout light-login');
-$('body').attr('class','no-skin');
 
+export default {
+  name: 'app',
+  mounted: function() {
+    $('body').removeClass('login-layout light-login');
+    $('body').attr('class','no-skin');
+  }, //mounted 在页面渲染后执行，常用于页面元素的初始化操作
+  methods:{
+    login(){
+      this.$router.push("/admin")
+    }
+  }
+}
 </script>

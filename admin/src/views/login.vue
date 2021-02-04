@@ -73,9 +73,11 @@
 </template>
 
 <script>
-$('body').attr('class', 'login-layout light-login');
 export default {
   name: 'app',
+  mounted: function() {
+    $('body').attr('class', 'login-layout light-login');
+  }, //mounted 在页面渲染后执行，常用于页面元素的初始化操作
   methods:{
     login(){
       this.$router.push("/admin")
