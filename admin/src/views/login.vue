@@ -74,12 +74,14 @@
 
 <script>
 export default {
-  name: 'app',
+  name: "login",
   mounted: function() {
-    $('body').attr('class', 'login-layout light-login');
-  }, //mounted 在页面渲染后执行，常用于页面元素的初始化操作
-  methods:{
-    login(){
+    $("body").removeClass("no-skin");
+    $("body").attr("class", "login-layout light-login");
+    // console.log("login");
+  },
+  methods: {
+    login () {
       this.$router.push("/admin")
     }
   }

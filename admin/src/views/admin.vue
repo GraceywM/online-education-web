@@ -978,14 +978,16 @@
 
 <script>
 
+
 export default {
-  name: 'app',
+  name: "admin",
   mounted: function() {
-    $('body').removeClass('login-layout light-login');
-    $('body').attr('class','no-skin');
-  }, //mounted 在页面渲染后执行，常用于页面元素的初始化操作
-  methods:{
-    login(){
+    $("body").removeClass("login-layout light-login");
+    $("body").attr("class", "no-skin");
+    // console.log("admin");
+  },
+  methods: {
+    login () {
       this.$router.push("/admin")
     }
   }
